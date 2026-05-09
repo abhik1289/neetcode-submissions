@@ -1,0 +1,26 @@
+class Solution {
+public:
+    bool hasDuplicate(vector<int>& nums) {
+        int n = nums.size();
+     unordered_map<int, int> map;
+
+// for(auto n:nums){
+//     map[n-1]++;
+//     if(map[n-1]>1)
+//     return true;
+// }
+
+// return false;
+
+for(int i=0;i<n;++i){
+    map[nums[i]]++;
+    if(map[nums[i]]>1)
+    return true;
+}
+
+
+
+return false;
+
+    }
+};
